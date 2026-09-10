@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#faf5ee",
+            "surface-container-low": "#f6f0e8",
+            "on-background": "#3a302a",
+            "background": "#faf5ee",
+            "inverse-on-surface": "#faf5ee",
+            "surface-container-highest": "#e6e0d6",
+            "on-secondary": "#ffffff",
+            "on-surface": "#3a302a",
+            "on-tertiary-container": "#3a2020",
+            "on-primary-fixed": "#401a08",
+            "surface-bright": "#faf5ee",
+            "surface-container": "#f2ece4",
+            "primary-container": "#e08850",
+            "primary-fixed": "#fbe8d8",
+            "tertiary": "#8c3c3c",
+            "secondary": "#78706a",
+            "primary-fixed-dim": "#f0a878",
+            "tertiary-container": "#d47070",
+            "tertiary-fixed-dim": "#e8a0a0",
+            "inverse-surface": "#3a302a",
+            "surface-container-high": "#ece6dc",
+            "on-primary-fixed-variant": "#8a4518",
+            "on-surface-variant": "#605850",
+            "on-primary": "#ffffff",
+            "inverse-primary": "#f0a878",
+            "surface-container-lowest": "#ffffff",
+            "on-error-container": "#7a1a10",
+            "error-container": "#fce4e0",
+            "outline": "#9a9088",
+            "tertiary-fixed": "#fce0e0",
+            "on-secondary-fixed-variant": "#504840",
+            "on-tertiary-fixed": "#2e1515",
+            "surface-dim": "#dcd6cc",
+            "primary": "#c2652a",
+            "outline-variant": "#d8d0c8",
+            "on-primary-container": "#fbe8d8",
+            "secondary-container": "#eae2da",
+            "surface-tint": "#c2652a",
+            "secondary-fixed": "#eae2da",
+            "on-error": "#ffffff",
+            "error": "#c0392b",
+            "on-secondary-fixed": "#2a2420",
+            "secondary-fixed-dim": "#cec6be",
+            "on-tertiary-fixed-variant": "#6e3030",
+            "on-secondary-container": "#605850",
+            "surface-variant": "#ece6dc",
+            "on-tertiary": "#ffffff"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          fontFamily: {
+            "headline": ["EB Garamond", "serif"],
+            "display": ["EB Garamond", "serif"],
+            "body": ["Manrope", "sans-serif"],
+            "label": ["Manrope", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#faf7f2] font-body text-on-surface antialiased min-h-screen flex flex-col justify-between selection:bg-primary/20 selection:text-primary">
+<!-- Header Simples e Elegante -->
+<header class="w-full bg-[#faf7f2]/90 backdrop-blur-md border-b border-outline-variant/30 sticky top-0 z-50">
+<div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+<!-- Marca & Nome do Laboratório -->
+<div class="flex items-center gap-4">
+<a class="flex items-center gap-3 transition-opacity hover:opacity-90" href="#">
+<img alt="MUSARQ Prototipagem" class="h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X1A23RKoGsnNonG8usr8wVF-B9rQwxAhjYA1T6E79Je92Rfh0e48-uxQxXAB0KuR5wRG9AXsICUUuw9FesCLiRaQ6k73gq85r5U1lghUVGWKwBH5u4QAbsiOJOCiCPB4B41ZOkzHDnYZVToubkAvcMyN2cwQsRmFQaGRLh1nhZdmK8ruoCD9Epbv4ghyjh5DkJ5wdLVn8bzH17pngH93qRl4pok_vA1ooFkZRbvX0vLRElV_EExwQX4-o"/>
+<div class="hidden sm:flex flex-col border-l border-outline-variant/60 pl-3">
+<span class="font-headline text-lg font-medium tracking-tight text-on-surface leading-tight">Laboratório de Prototipagem</span>
+<span class="font-label text-[11px] text-on-surface-variant tracking-wider uppercase">FAU · Universidade de São Paulo</span>
+</div>
+</a>
+</div>
+<!-- Links discretos -->
+<div class="flex items-center gap-5 text-sm">
+<a class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors font-medium text-xs sm:text-sm" href="javascript:void(0)" onclick="alert('Central de Atendimento do Laboratório:\nHorário: Seg-Sex, 08h30 às 18h\nEmail: musarq-lab@usp.br\nTelefone: (11) 3091-4500')">
+<span class="material-symbols-outlined text-lg">help_outline</span>
+<span>Ajuda &amp; Suporte</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Conteúdo Central: Card Focado e Limpo -->
+<main class="flex-1 flex flex-col items-center justify-center px-4 sm:px-6 py-10 md:py-14 w-full">
+<div class="w-full max-w-lg">
+<!-- Card Principal -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-xl shadow-on-surface/[0.04] border border-outline-variant/40 p-7 sm:p-10 transition-all">
+<!-- Seletor de Abas Minimalista: Entrar / Cadastrar -->
+<div class="flex bg-surface-container-low p-1.5 rounded-xl mb-8">
+<button class="flex-1 py-2.5 rounded-lg text-sm font-label font-semibold text-primary bg-surface-container-lowest shadow-sm transition-all flex items-center justify-center gap-2" id="tab-login-btn" onclick="switchTab('login')">
+<span class="material-symbols-outlined text-[19px]">login</span>
+            Entrar
+          </button>
+<button class="flex-1 py-2.5 rounded-lg text-sm font-label font-medium text-on-surface-variant hover:text-on-surface transition-all flex items-center justify-center gap-2" id="tab-register-btn" onclick="switchTab('register')">
+<span class="material-symbols-outlined text-[19px]">person_add</span>
+            Cadastrar
+          </button>
+</div>
+<!-- ============================================== -->
+<!-- ABA 1: ENTRAR (LOGIN)                          -->
+<!-- ============================================== -->
+<div class="flex flex-col" id="section-login">
+<!-- Cabeçalho Acolhedor -->
+<div class="mb-6 text-center sm:text-left">
+<h1 class="font-headline text-3xl font-medium text-on-surface tracking-tight leading-tight">
+              Acesse sua conta
+            </h1>
+<p class="text-sm text-on-surface-variant mt-1">
+              Sistema de Gestão do Laboratório de Prototipagem
+            </p>
+</div>
+<form class="flex flex-col space-y-5" onsubmit="handleLoginSubmit(event)">
+<!-- Seletor de Perfil Simples (Técnico / Administrador) -->
+<div class="flex flex-col space-y-2">
+<label class="text-xs font-label font-semibold uppercase tracking-wider text-on-surface-variant">
+                Perfil de acesso
+              </label>
+<div class="grid grid-cols-2 gap-2.5">
+<label class="flex items-center gap-2.5 p-3 rounded-lg border border-outline-variant/60 bg-surface-container-low/40 cursor-pointer hover:bg-surface-container-low transition-colors has-[:checked]:border-primary has-[:checked]:bg-primary/5 has-[:checked]:text-primary">
+<input checked="" class="text-primary focus:ring-primary w-4 h-4 border-outline" name="login_role" type="radio" value="tecnico"/>
+<span class="text-xs sm:text-sm font-medium text-on-surface">Técnico</span>
+</label>
+<label class="flex items-center gap-2.5 p-3 rounded-lg border border-outline-variant/60 bg-surface-container-low/40 cursor-pointer hover:bg-surface-container-low transition-colors has-[:checked]:border-primary has-[:checked]:bg-primary/5 has-[:checked]:text-primary">
+<input class="text-primary focus:ring-primary w-4 h-4 border-outline" name="login_role" type="radio" value="admin"/>
+<span class="text-xs sm:text-sm font-medium text-on-surface">Administrador</span>
+</label>
+</div>
+</div>
+<!-- Identificador -->
+<div class="flex flex-col space-y-1.5">
+<label class="text-xs font-label font-semibold uppercase tracking-wider text-on-surface-variant" for="login-user">
+                E-mail ou Matrícula USP
+              </label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant/70 text-[20px] pointer-events-none">account_circle</span>
+<input class="w-full bg-surface-container-low/40 border border-outline-variant/60 text-on-surface text-sm rounded-lg pl-10 pr-4 py-3 placeholder:text-on-surface-variant/40 focus:border-primary focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all" id="login-user" placeholder="ex.: seu.nome@usp.br" required="" type="text"/>
+</div>
+</div>
+<!-- Senha com Alternância de Visibilidade -->
+<div class="flex flex-col space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="text-xs font-label font-semibold uppercase tracking-wider text-on-surface-variant" for="login-pass">
+                  Senha
+                </label>
+<a class="text-xs text-primary hover:underline font-medium" href="javascript:void(0)" onclick="alert('Para redefinir sua senha de acesso, contate o administrador do laboratório ou ramal 2841.')">
+                  Esqueceu a senha?
+                </a>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant/70 text-[20px] pointer-events-none">lock</span>
+<input class="w-full bg-surface-container-low/40 border border-outline-variant/60 text-on-surface text-sm rounded-lg pl-10 pr-11 py-3 placeholder:text-on-surface-variant/40 focus:border-primary focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all" id="login-pass" placeholder="••••••••••••" required="" type="password"/>
+<button aria-label="Exibir senha" class="absolute right-3 p-1 text-on-surface-variant hover:text-on-surface transition-colors" onclick="togglePassword('login-pass', 'eye-icon-log')" type="button">
+<span class="material-symbols-outlined text-[19px]" id="eye-icon-log">visibility</span>
+</button>
+</div>
+</div>
+<!-- Opções Extras: Lembrar -->
+<div class="flex items-center justify-between pt-0.5">
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary border-outline-variant/80" type="checkbox"/>
+<span class="text-xs text-on-surface-variant font-normal">Lembrar neste computador</span>
+</label>
+</div>
+<!-- Botão Principal de Login -->
+<button class="w-full py-3.5 px-6 rounded-lg bg-primary hover:bg-[#ae5721] active:scale-[0.99] text-on-primary font-label font-semibold text-sm tracking-wide shadow-md shadow-primary/20 transition-all flex items-center justify-center gap-2 cursor-pointer mt-2" type="submit">
+<span>Entrar no Sistema</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</form>
+<!-- Nota Acolhedora ao Aluno/Pesquisador -->
+<div class="mt-8 pt-6 border-t border-outline-variant/40 flex items-start gap-3 text-xs text-on-surface-variant leading-relaxed">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">info</span>
+<p>
+<strong class="font-semibold text-on-surface">É aluno ou pesquisador?</strong> As máquinas de corte a laser, CNC e impressoras 3D são operadas diretamente pelos técnicos credenciados da bancada.
+            </p>
+</div>
+</div>
+<!-- ============================================== -->
+<!-- ABA 2: CADASTRAR (NOVO USUÁRIO)                -->
+<!-- ============================================== -->
+<div class="hidden flex flex-col" id="section-register">
+<!-- Cabeçalho -->
+<div class="mb-6 text-center sm:text-left">
+<h1 class="font-headline text-3xl font-medium text-on-surface tracking-tight leading-tight">
+              Criar novo cadastro
+            </h1>
+<p class="text-sm text-on-surface-variant mt-1">
+              Registro de usuários, solicitantes de corte e operadores
+            </p>
+</div>
+<form class="flex flex-col space-y-4 sm:space-y-5" onsubmit="handleRegisterSubmit(event)">
+<!-- Seletor de Papéis Limpo em Pills -->
+<div class="flex flex-col space-y-2">
+<label class="text-xs font-label font-semibold uppercase tracking-wider text-on-surface-variant">
+                Tipo de usuário
+              </label>
+<div class="grid grid-cols-3 gap-2">
+<button class="py-2.5 px-3 rounded-lg border text-xs font-semibold font-label transition-all border-primary bg-primary/10 text-primary text-center" id="pill-cliente" onclick="setRegRole('cliente')" type="button">
+                  Cliente / Aluno
+                </button>
+<button class="py-2.5 px-3 rounded-lg border border-outline-variant/60 bg-surface-container-low/40 text-on-surface-variant hover:text-on-surface text-xs font-medium font-label transition-all text-center" id="pill-tecnico" onclick="setRegRole('tecnico')" type="button">
+                  Técnico
+                </button>
+<button class="py-2.5 px-3 rounded-lg border border-outline-variant/60 bg-surface-container-low/40 text-on-surface-variant hover:text-on-surface text-xs font-medium font-label transition-all text-center" id="pill-admin" onclick="setRegRole('admin')" type="button">
+                  Administrador
+                </button>
+</div>
+</div>
+<!-- Aviso Suave quando "Cliente" selecionado -->
+<div class="p-3.5 rounded-lg bg-surface-container-low/70 border border-outline-variant/40 flex items-start gap-2.5 text-xs text-on-surface-variant leading-relaxed" id="cliente-hint">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">assignment_turned_in</span>
+<span>
+<strong class="font-semibold text-on-surface">Cadastro Simplificado:</strong> Usuários do tipo <em>Cliente</em> têm seus dados vinculados automaticamente às ordens de serviço (O.S.) e empréstimos, sem necessidade de senha de bancada.
+              </span>
+</div>
+<!-- Campos Básicos -->
+<div class="flex flex-col space-y-1.5">
+<label class="text-xs font-label font-semibold uppercase tracking-wider text-on-surface-variant">Nome Completo</label>
+<input class="w-full bg-surface-container-low/40 border border-outline-variant/60 text-on-surface text-sm rounded-lg px-3.5 py-2.5 placeholder:text-on-surface-variant/40 focus:border-primary focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="Ex.: Lucas Mendes Alencar" required="" type="text"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+<div class="flex flex-col space-y-1.5">
+<label class="text-xs font-label font-semibold uppercase tracking-wider text-on-surface-variant">E-mail Institucional</label>
+<input class="w-full bg-surface-container-low/40 border border-outline-variant/60 text-on-surface text-sm rounded-lg px-3.5 py-2.5 placeholder:text-on-surface-variant/40 focus:border-primary focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="nome@usp.br" required="" type="email"/>
+</div>
+<div class="flex flex-col space-y-1.5">
+<label class="text-xs font-label font-semibold uppercase tracking-wider text-on-surface-variant">Matrícula / Nº USP</label>
+<input class="w-full bg-surface-container-low/40 border border-outline-variant/60 text-on-surface text-sm rounded-lg px-3.5 py-2.5 placeholder:text-on-surface-variant/40 focus:border-primary focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="Ex.: 11849204" required="" type="text"/>
+</div>
+</div>
+<div class="flex flex-col space-y-1.5">
+<label class="text-xs font-label font-semibold uppercase tracking-wider text-on-surface-variant">Vínculo Acadêmico</label>
+<select class="w-full bg-surface-container-low/40 border border-outline-variant/60 text-on-surface text-sm rounded-lg px-3 py-2.5 focus:border-primary focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all">
+<option value="grad">FAU - Graduação em Arquitetura &amp; Urbanismo / Design</option>
+<option value="pos">Pós-Graduação (Mestrado / Doutorado)</option>
+<option value="docente">Corpo Docente / Pesquisador</option>
+<option value="poli">Escola Politécnica (EPUSP)</option>
+<option value="externo">Outro Vínculo Acadêmico USP</option>
+</select>
+</div>
+<!-- Campos Condicionais de Senha (para Técnico e Admin) -->
+<div class="hidden flex-col space-y-3 pt-2" id="operator-password-group">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+<div class="flex flex-col space-y-1.5">
+<label class="text-xs font-label font-semibold uppercase tracking-wider text-on-surface-variant">Criar Senha</label>
+<input class="w-full bg-surface-container-low/40 border border-outline-variant/60 text-on-surface text-sm rounded-lg px-3.5 py-2.5 focus:border-primary focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all" id="reg-pass-input" placeholder="Mínimo 8 caracteres" type="password"/>
+</div>
+<div class="flex flex-col space-y-1.5">
+<label class="text-xs font-label font-semibold uppercase tracking-wider text-on-surface-variant">Confirmar Senha</label>
+<input class="w-full bg-surface-container-low/40 border border-outline-variant/60 text-on-surface text-sm rounded-lg px-3.5 py-2.5 focus:border-primary focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all" id="reg-pass-conf" placeholder="Repita a senha" type="password"/>
+</div>
+</div>
+</div>
+<!-- Botão de Ação -->
+<button class="w-full py-3.5 px-6 rounded-lg bg-primary hover:bg-[#ae5721] active:scale-[0.99] text-on-primary font-label font-semibold text-sm tracking-wide shadow-md shadow-primary/20 transition-all flex items-center justify-center gap-2 cursor-pointer mt-2" type="submit">
+<span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+<span id="btn-register-label">Concluir Cadastro</span>
+</button>
+</form>
+</div>
+</div>
+<!-- Rodapé do Card: Ajuda Rápida -->
+<div class="mt-6 text-center text-xs text-on-surface-variant/80">
+        Precisa de atendimento presencial? Bancada do Pavilhão Norte · Sala 14
+      </div>
+</div>
+</main>
+<!-- Rodapé Minimalista da Página -->
+<footer class="w-full border-t border-outline-variant/30 py-6 bg-[#faf7f2]">
+<div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant">
+<p class="font-body text-center sm:text-left">
+        © 2024 MUSARQ · Faculdade de Arquitetura e Urbanismo · USP
+      </p>
+<div class="flex items-center gap-6">
+<a class="hover:text-primary transition-colors" href="javascript:void(0)" onclick="alert('Normas de Uso do Laboratório:\n- Uso obrigatório de EPI para manuseio de máquinas.\n- Arquivos devem ser entregues revisados em formato .DXF ou .STL.')">Normas de Uso</a>
+<a class="hover:text-primary transition-colors" href="mailto:musarq-lab@usp.br">Contato</a>
+</div>
+</div>
+</footer>
+<!-- Interatividade Limpa e Direta -->
+<script>
+    let currentRegRole = 'cliente';
+
+    function switchTab(tab) {
+      const loginSection = document.getElementById('section-login');
+      const registerSection = document.getElementById('section-register');
+      const loginBtn = document.getElementById('tab-login-btn');
+      const registerBtn = document.getElementById('tab-register-btn');
+
+      if (tab === 'login') {
+        loginSection.classList.remove('hidden');
+        registerSection.classList.add('hidden');
+
+        loginBtn.className = 'flex-1 py-2.5 rounded-lg text-sm font-label font-semibold text-primary bg-surface-container-lowest shadow-sm transition-all flex items-center justify-center gap-2';
+        registerBtn.className = 'flex-1 py-2.5 rounded-lg text-sm font-label font-medium text-on-surface-variant hover:text-on-surface transition-all flex items-center justify-center gap-2';
+      } else {
+        loginSection.classList.add('hidden');
+        registerSection.classList.remove('hidden');
+
+        registerBtn.className = 'flex-1 py-2.5 rounded-lg text-sm font-label font-semibold text-primary bg-surface-container-lowest shadow-sm transition-all flex items-center justify-center gap-2';
+        loginBtn.className = 'flex-1 py-2.5 rounded-lg text-sm font-label font-medium text-on-surface-variant hover:text-on-surface transition-all flex items-center justify-center gap-2';
+      }
+    }
+
+    function togglePassword(inputId, iconId) {
+      const input = document.getElementById(inputId);
+      const icon = document.getElementById(iconId);
+      if (!input || !icon) return;
+
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.innerText = 'visibility_off';
+      } else {
+        input.type = 'password';
+        icon.innerText = 'visibility';
+      }
+    }
+
+    function setRegRole(role) {
+      currentRegRole = role;
+      const roles = ['cliente', 'tecnico', 'admin'];
+
+      roles.forEach(r => {
+        const btn = document.getElementById('pill-' + r);
+        if (r === role) {
+          btn.className = 'py-2.5 px-3 rounded-lg border text-xs font-semibold font-label transition-all border-primary bg-primary/10 text-primary text-center';
+        } else {
+          btn.className = 'py-2.5 px-3 rounded-lg border border-outline-variant/60 bg-surface-container-low/40 text-on-surface-variant hover:text-on-surface text-xs font-medium font-label transition-all text-center';
+        }
+      });
+
+      const clienteHint = document.getElementById('cliente-hint');
+      const passGroup = document.getElementById('operator-password-group');
+      const passInput = document.getElementById('reg-pass-input');
+      const passConf = document.getElementById('reg-pass-conf');
+      const label = document.getElementById('btn-register-label');
+
+      if (role === 'cliente') {
+        clienteHint.classList.remove('hidden');
+        passGroup.classList.add('hidden');
+        passInput.required = false;
+        passConf.required = false;
+        label.innerText = 'Concluir Cadastro de Cliente';
+      } else {
+        clienteHint.classList.add('hidden');
+        passGroup.classList.remove('hidden');
+        passInput.required = true;
+        passConf.required = true;
+        label.innerText = role === 'tecnico' ? 'Cadastrar Técnico Operador' : 'Cadastrar Administrador';
+      }
+    }
+
+    function handleLoginSubmit(e) {
+      e.preventDefault();
+      const user = document.getElementById('login-user').value;
+      alert(`Login realizado com sucesso para ${user}.\nBem-vindo ao Laboratório MUSARQ!`);
+    }
+
+    function handleRegisterSubmit(e) {
+      e.preventDefault();
+      if (currentRegRole === 'cliente') {
+        alert('Cadastro realizado com sucesso!\nO usuário agora está habilitado para ordens de serviço no laboratório.');
+      } else {
+        alert(`Operador (${currentRegRole.toUpperCase()}) cadastrado com sucesso.`);
+      }
+    }
+  </script>
+</body></html>

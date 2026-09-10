@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-container": "#d47070", "on-primary-container": "#fbe8d8", "on-tertiary-container": "#3a2020", "background": "#faf5ee", "surface-tint": "#c2652a", "on-secondary-fixed-variant": "#504840", "tertiary-fixed": "#fce0e0", "secondary": "#78706a", "on-primary-fixed": "#401a08", "surface-variant": "#ece6dc", "inverse-surface": "#3a302a", "secondary-fixed": "#eae2da", "outline-variant": "#d8d0c8", "primary": "#c2652a", "primary-container": "#e08850", "surface-container-high": "#ece6dc", "surface-container-highest": "#e6e0d6", "tertiary": "#8c3c3c", "error-container": "#fce4e0", "secondary-fixed-dim": "#cec6be", "on-tertiary-fixed-variant": "#6e3030", "primary-fixed-dim": "#f0a878", "on-error-container": "#7a1a10", "surface": "#faf5ee", "primary-fixed": "#fbe8d8", "inverse-on-surface": "#faf5ee", "secondary-container": "#eae2da", "surface-dim": "#dcd6cc", "outline": "#9a9088", "on-tertiary-fixed": "#2e1515", "on-secondary": "#ffffff", "on-surface": "#3a302a", "on-primary-fixed-variant": "#8a4518", "surface-bright": "#faf5ee", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "surface-container": "#f2ece4", "on-surface-variant": "#605850", "tertiary-fixed-dim": "#e8a0a0", "error": "#c0392b", "inverse-primary": "#f0a878", "on-secondary-fixed": "#2a2420", "surface-container-low": "#f6f0e8", "on-primary": "#ffffff", "on-secondary-container": "#605850", "on-tertiary": "#ffffff", "on-background": "#3a302a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": {}, "fontFamily": { "headline": ["EB Garamond"], "display": ["EB Garamond"], "body": ["Manrope"], "label": ["Manrope"] }, "fontSize": {} } } }</script></head><body class="bg-background font-body text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-6 px-4 shadow-[0_2px_16px_rgba(58,48,42,0.04)]"><div class="flex flex-col gap-6"><div class="flex items-center gap-3 px-3 py-2"><img alt="MUSARQ Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X1A23RKoGsnNonG8usr8wVF-B9rQwxAhjYA1T6E79Je92Rfh0e48-uxQxXAB0KuR5wRG9AXsICUUuw9FesCLiRaQ6k73gq85r5U1lghUVGWKwBH5u4QAbsiOJOCiCPB4B41ZOkzHDnYZVToubkAvcMyN2cwQsRmFQaGRLh1nhZdmK8ruoCD9Epbv4ghyjh5DkJ5wdLVn8bzH17pngH93qRl4pok_vA1ooFkZRbvX0vLRElV_EExwQX4-o"/><div class="flex flex-col"><span class="font-headline text-lg font-bold tracking-tight text-on-surface leading-tight">MUSARQ</span><span class="text-[11px] font-label uppercase tracking-widest text-on-surface-variant">Lab Prototipagem</span></div></div><div class="px-3"><div class="h-[1px] w-full bg-outline-variant/60"></div></div><nav class="flex flex-col gap-1.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_2px_16px_rgba(58,48,42,0.04)]"><a class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span>Dashboard &amp; Visão Geral</span></a><a class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="maquinas" href="#"><span class="material-symbols-outlined text-[20px]">precision_manufacturing</span><span>Máquinas &amp; Manutenções</span></a><a aria-current="page" class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-lg transition-all duration-150 bg-primary-container text-on-primary-container font-semibold shadow-[0_2px_16px_rgba(58,48,42,0.04)]" data-path="producao" href="#"><span class="material-symbols-outlined text-[20px]">layers</span><span>Produção &amp; Insumos</span></a><a class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="emprestimos" href="#"><span class="material-symbols-outlined text-[20px]">swap_horiz</span><span>Empréstimos de Equipamentos</span></a><a class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="relatorios" href="#"><span class="material-symbols-outlined text-[20px]">bar_chart</span><span>Relatórios Gerenciais</span></a></nav></div><div class="flex flex-col gap-3 px-3"><div class="p-3 rounded-lg bg-surface-container flex flex-col gap-1.5"><div class="flex items-center gap-2"><span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="text-[11px] font-label font-semibold text-on-surface uppercase tracking-wider">Status do Sistema</span></div><p class="text-xs text-on-surface-variant leading-relaxed">Fila de corte laser: 4 jobs. Impressão 3D: 85% capacidade.</p></div><div class="text-[11px] text-on-surface-variant font-label text-center pt-2">© 2024 Lab MUSARQ</div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_2px_16px_rgba(58,48,42,0.04)]"><div class="h-16 w-full px-8 flex items-center justify-between"><div class="flex items-center gap-3"><div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="text-xs font-label font-medium text-on-surface">Laboratório Operacional - Turno Manhã</span></div></div><div class="flex items-center gap-4"><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Alertas de Manutenção Preventiva" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary"></span></button><button class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-primary text-on-primary text-xs font-label font-semibold tracking-wide hover:bg-primary-container transition-colors shadow-[0_2px_16px_rgba(58,48,42,0.04)]" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Nova O.S.</span></button><div class="h-6 w-[1px] bg-outline-variant/60"></div><div class="flex items-center gap-3 pl-1"><div class="flex flex-col text-right"><span class="text-xs font-medium text-on-surface leading-tight">Lucas Mendes</span><span class="text-[10px] font-label text-on-surface-variant">Técnico de Prototipagem</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHDJ47uv-nXrtn1-L-KLXUKuRnBDtrKcXt0iLAFPk_z4KG3NDBEOFBzUBzHPz7wTlysGBawUP-61BKHyoPvd8kHaJCpKXpcNx4q9_9-P2njf8D4CS_EdnFzhgYbqGrw5B7hrxJ-b_omnSnqE2T8aE85C89S711x3JGlxBEVoLi89f0EjoHc1qmeWBcKNTj3leqoOo2WUwiBszQISItGLn4VIUNtwhlaAMCYy7eyp1mO_VWJJC8Zm1v"/></div></div></div></header><main class="relative pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="px-8 py-8 flex flex-col gap-10">
+<!-- Top Headline Section -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+<div class="flex flex-col gap-2 max-w-2xl">
+<div class="flex items-center gap-2 text-xs font-label uppercase tracking-widest text-primary font-semibold">
+<span>Controle de Fabricação Aditiva</span>
+<span>•</span>
+<span>RF04 • RF09 • RF11</span>
+</div>
+<h1 class="font-headline text-4xl sm:text-5xl font-normal text-on-surface tracking-tight leading-tight">
+          Ordens de Produção &amp; Estoque Fracionado
+        </h1>
+<p class="text-sm font-body text-on-surface-variant leading-relaxed">
+          Monitoramento gravimétrico de carretéis em miligramas e gramas, controle contínuo de abatimento e rastreabilidade total de filamentos e resinas técnicas.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-surface-container text-on-surface text-xs font-label font-semibold tracking-wide hover:bg-surface-container-high transition-all shadow-sm" id="btnOpenInsumo" type="button">
+<span class="material-symbols-outlined text-[18px]">scale</span>
+<span>+ Entrada de Insumo (kg)</span>
+</button>
+<button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-on-primary text-xs font-label font-semibold tracking-wide hover:bg-primary-container transition-all shadow-sm" id="btnOpenProducao" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>+ Nova Produção</span>
+</button>
+</div>
+</div>
+<!-- Indicadores de Consumo Gravimétrico (RN04) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
+<!-- Card 1: Total Estoque -->
+<div class="relative overflow-hidden bg-surface-container-low rounded-xl p-6 shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-1">
+<span class="text-[11px] font-label uppercase tracking-widest text-on-surface-variant font-semibold">Total em Estoque</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline text-3xl sm:text-4xl text-on-surface font-semibold">34.5</span>
+<span class="text-sm font-label text-on-surface-variant">kg brutos</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl">inventory_2</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-xs text-on-surface-variant">
+<span class="font-label">38 carretéis ativos</span>
+<span class="text-primary font-medium flex items-center gap-0.5">
+<span class="material-symbols-outlined text-sm">check_circle</span> 100% calibrados
+          </span>
+</div>
+</div>
+<!-- Card 2: Consumo Mês Fracionado -->
+<div class="relative overflow-hidden bg-surface-container-low rounded-xl p-6 shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-1">
+<span class="text-[11px] font-label uppercase tracking-widest text-on-surface-variant font-semibold">Consumo no Mês Corrente</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline text-3xl sm:text-4xl text-primary font-semibold">6.840</span>
+<span class="text-sm font-label text-on-surface-variant">g (6,84 kg)</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-xl">insights</span>
+</div>
+</div>
+<!-- Micro sparkline svg -->
+<div class="mt-4 flex items-center justify-between gap-2">
+<svg class="w-24 h-6 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 100 24">
+<path d="M0 20 L15 16 L30 18 L45 8 L60 14 L75 4 L90 10 L100 2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-xs font-label text-on-surface-variant">+12% vs. mês anterior</span>
+</div>
+</div>
+<!-- Card 3: Média por Impressão -->
+<div class="relative overflow-hidden bg-surface-container-low rounded-xl p-6 shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-1">
+<span class="text-[11px] font-label uppercase tracking-widest text-on-surface-variant font-semibold">Média / Peça Fabricada</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline text-3xl sm:text-4xl text-on-surface font-semibold">142</span>
+<span class="text-sm font-label text-on-surface-variant">gramas</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-xl">donut_large</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-xs text-on-surface-variant">
+<span>Desvio padrão: ±34g</span>
+<span class="text-on-surface font-semibold">RN04 Validado</span>
+</div>
+</div>
+<!-- Card 4: Alertas de Baixo Volume -->
+<div class="relative overflow-hidden bg-error-container rounded-xl p-6 shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-1">
+<span class="text-[11px] font-label uppercase tracking-widest text-on-error-container font-semibold">Abaixo de 150g (RN04)</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline text-3xl sm:text-4xl text-on-error-container font-bold">2</span>
+<span class="text-sm font-label text-on-error-container">carretéis críticos</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest/80 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-xl">warning</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-xs text-on-error-container font-medium">
+<span>ABS Cinza e PETG Translúcido</span>
+<a class="underline hover:text-on-surface" href="#bobinas">Revisar</a>
+</div>
+</div>
+</div>
+<!-- Main Grid: Bobinas Monitoradas & Simulador de Abatimento Gravimétrico -->
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-8 items-start">
+<!-- Seção Monitoramento de Bobinas de Insumo (RF04) -->
+<div class="xl:col-span-2 flex flex-col gap-5 bg-surface-container-low rounded-2xl p-7 shadow-sm" id="bobinas">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div>
+<span class="text-[11px] font-label uppercase tracking-widest text-primary font-bold">Estoque Físico Fracionado</span>
+<h2 class="font-headline text-2xl font-semibold text-on-surface">Bobinas &amp; Recipientes Ativos</h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full text-[11px] font-label font-medium bg-surface-container-high text-on-surface">
+              4 em Uso na Bancada
+            </span>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Bobinas Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+<!-- Carretel 1 -->
+<div class="bg-surface-container rounded-xl p-5 flex flex-col gap-4 relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-primary text-2xl">fiber_manual_record</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-semibold text-sm text-on-surface leading-snug">PLA Branco 1.75mm</h3>
+<span class="text-xs text-on-surface-variant font-label">Lote #PL-9921 • Creality</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-md text-[10px] font-label font-bold uppercase tracking-wider bg-surface-container-highest text-on-surface-variant">
+                Estável
+              </span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between text-xs font-label">
+<span class="text-on-surface-variant">Saldo Fracionado</span>
+<span class="font-semibold text-on-surface">480 g / 1.000 g</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full rounded-full bg-primary transition-all duration-500" style="width: 48%;"></div>
+</div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant pt-2">
+<span>Tara carretel: 210g</span>
+<span class="font-medium text-on-surface">~ 3 impressões médias</span>
+</div>
+</div>
+<!-- Carretel 2 -->
+<div class="bg-surface-container rounded-xl p-5 flex flex-col gap-4 relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-inverse-surface flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-surface text-2xl">motion_photos_on</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-semibold text-sm text-on-surface leading-snug">PETG Preto 1.75mm</h3>
+<span class="text-xs text-on-surface-variant font-label">Lote #PT-4410 • 3D Fila</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-md text-[10px] font-label font-bold uppercase tracking-wider bg-surface-container-highest text-on-surface-variant">
+                Excelente
+              </span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between text-xs font-label">
+<span class="text-on-surface-variant">Saldo Fracionado</span>
+<span class="font-semibold text-on-surface">820 g / 1.000 g</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full rounded-full bg-primary transition-all duration-500" style="width: 82%;"></div>
+</div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant pt-2">
+<span>Tara carretel: 215g</span>
+<span class="font-medium text-on-surface">~ 6 impressões médias</span>
+</div>
+</div>
+<!-- Carretel 3 (Crítico / RN04) -->
+<div class="bg-error-container/40 rounded-xl p-5 flex flex-col gap-4 relative overflow-hidden group hover:bg-error-container/60 transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-error text-on-error flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-xl">error_outline</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-semibold text-sm text-on-surface leading-snug">ABS Cinza 1.75mm</h3>
+<span class="text-xs text-on-surface-variant font-label">Lote #AB-1029 • Esun</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-md text-[10px] font-label font-bold uppercase tracking-wider bg-error text-on-error animate-pulse">
+                Limite 150g
+              </span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between text-xs font-label">
+<span class="text-on-error-container font-semibold">Saldo Crítico</span>
+<span class="font-bold text-error">150 g / 1.000 g</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full rounded-full bg-error transition-all duration-500" style="width: 15%;"></div>
+</div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-error-container pt-2">
+<span class="font-bold">RN04: Bloqueio para peças &gt;130g</span>
+<span class="underline cursor-pointer">Trocar Carretel</span>
+</div>
+</div>
+<!-- Carretel 4 (Resina Líquida) -->
+<div class="bg-surface-container rounded-xl p-5 flex flex-col gap-4 relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-tertiary text-2xl">science</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-semibold text-sm text-on-surface leading-snug">Resina Standard Cinza</h3>
+<span class="text-xs text-on-surface-variant font-label">Garrafa 1 Litro • Elegoo</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-md text-[10px] font-label font-bold uppercase tracking-wider bg-surface-container-highest text-on-surface-variant">
+                Líquido
+              </span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between text-xs font-label">
+<span class="text-on-surface-variant">Volume Restante</span>
+<span class="font-semibold text-on-surface">650 ml / 1.000 ml</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full rounded-full bg-tertiary transition-all duration-500" style="width: 65%;"></div>
+</div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant pt-2">
+<span>Densidade: 1.12 g/ml</span>
+<span class="font-medium text-on-surface">Estoque Seguro</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Mini-Painel Interativo: Abatimento Fracionado Automático (RN04, RF11) -->
+<div class="bg-surface-container-low rounded-2xl p-7 shadow-sm flex flex-col gap-5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-label uppercase tracking-widest text-primary font-bold">Automação Gravimétrica</span>
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+</div>
+<h2 class="font-headline text-2xl font-semibold text-on-surface">Cálculo de Abatimento</h2>
+<p class="text-xs text-on-surface-variant">Simule ou debite instantaneamente o consumo do peso fatiado no carretel selecionado.</p>
+</div>
+<form class="flex flex-col gap-4 mt-2" id="formAbatimento">
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-label font-semibold text-on-surface" for="selectCarretel">Carretel em Uso</label>
+<select class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-lowest text-xs font-body text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" id="selectCarretel">
+<option data-nome="PLA Branco 1.75mm" value="480">PLA Branco 1.75mm (Saldo: 480g)</option>
+<option data-nome="PETG Preto 1.75mm" value="820">PETG Preto 1.75mm (Saldo: 820g)</option>
+<option data-nome="ABS Cinza 1.75mm" value="150">ABS Cinza 1.75mm (Saldo: 150g - CRÍTICO)</option>
+<option data-nome="Resina Standard Cinza" value="650">Resina Standard Cinza (Saldo: 650ml)</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-label font-semibold text-on-surface" for="inputPesoGrama">Peso da Peça (g)</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-lowest text-xs font-body text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" id="inputPesoGrama" max="1000" min="0" type="number" value="125"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-label font-semibold text-on-surface" for="inputSuportes">Suportes / Purgas (g)</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-lowest text-xs font-body text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" id="inputSuportes" max="200" min="0" type="number" value="18"/>
+</div>
+</div>
+<!-- Card de Projeção Dinâmica -->
+<div class="bg-surface-container rounded-xl p-4 flex flex-col gap-3">
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant font-label">Consumo Total Estimado:</span>
+<span class="font-bold text-primary text-sm" id="labelTotalConsumo">143 g</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant font-label">Novo Saldo Projetado:</span>
+<span class="font-bold text-on-surface" id="labelNovoSaldo">337 g</span>
+</div>
+<div class="hidden p-2.5 rounded-lg bg-error-container text-on-error-container text-[11px] leading-tight font-medium" id="avisoAlertaRN04">
+<span class="font-bold">Atenção (RN04):</span> Esta impressão deixará o carretel abaixo do limite de segurança (150g).
+            </div>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-primary text-on-primary text-xs font-label font-semibold tracking-wide hover:bg-primary-container transition-all flex items-center justify-center gap-2 shadow-sm" id="btnConfirmarAbatimento" type="button">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span>Abater Saldo da Bobina</span>
+</button>
+</form>
+<div class="text-[11px] font-label text-on-surface-variant text-center border-t border-outline-variant/30 pt-3">
+          Atribuição imediata em conformidade com RF11 e RN04.
+        </div>
+</div>
+</div>
+<!-- Tabela de Relatório e Registro de Produção (RF09, RN05, RN06) -->
+<div class="flex flex-col gap-5 bg-surface-container-low rounded-2xl p-7 shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div>
+<div class="flex items-center gap-2">
+<span class="text-[11px] font-label uppercase tracking-widest text-primary font-bold">Rastreabilidade Operacional</span>
+<span class="text-xs text-on-surface-variant font-label">• RN05 • RN06</span>
+</div>
+<h2 class="font-headline text-2xl font-semibold text-on-surface">Registro de Ordens de Produção (O.S.)</h2>
+</div>
+<!-- Filtros e Busca Rápida -->
+<div class="flex flex-wrap items-center gap-3">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[18px]">search</span>
+<input class="pl-9 pr-4 py-2 rounded-lg bg-surface-container-lowest text-xs font-body text-on-surface w-64 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Filtrar por projeto, aluno ou técnico..." type="text"/>
+</div>
+<select class="px-3 py-2 rounded-lg bg-surface-container-lowest text-xs font-body text-on-surface focus:outline-none focus:ring-2 focus:ring-primary">
+<option>Todas as Operações</option>
+<option>Impressão 3D (FDM/SLA)</option>
+<option>Escaneamento 3D (Isento)</option>
+</select>
+</div>
+</div>
+<!-- Tabela Customizada sem Bordas Estruturais -->
+<div class="overflow-x-auto">
+<table class="w-full text-left text-xs font-body">
+<thead>
+<tr class="text-[11px] font-label uppercase tracking-wider text-on-surface-variant bg-surface-container/60 rounded-lg">
+<th class="py-3.5 px-4 font-semibold rounded-l-lg">ID Ordem</th>
+<th class="py-3.5 px-4 font-semibold">Peça / Projeto</th>
+<th class="py-3.5 px-4 font-semibold">Tipo</th>
+<th class="py-3.5 px-4 font-semibold">Máquina</th>
+<th class="py-3.5 px-4 font-semibold">Cliente / Demandante</th>
+<th class="py-3.5 px-4 font-semibold">Técnico</th>
+<th class="py-3.5 px-4 font-semibold">Insumo Consumido</th>
+<th class="py-3.5 px-4 font-semibold">Tempo</th>
+<th class="py-3.5 px-4 font-semibold">Conclusão</th>
+<th class="py-3.5 px-4 font-semibold rounded-r-lg text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Linha 1: Impressão 3D Grande Arquitetura -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-4 px-4 font-label font-bold text-primary">#OS-8491</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Maquete Fachada Bloco B</span>
+<span class="text-[11px] text-on-surface-variant">TCC Arquitetura e Urbanismo</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="px-2.5 py-1 rounded text-[10px] font-label font-semibold bg-surface-container text-on-surface">
+                  Impressão 3D
+                </span>
+</td>
+<td class="py-4 px-4 text-on-surface">Creality Ender 5 Plus</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Mariana S. Rios</span>
+<span class="text-[10px] text-on-surface-variant font-label">Graduanda • Mat. 21089</span>
+</div>
+</td>
+<td class="py-4 px-4 text-on-surface-variant">Lucas Mendes</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-on-surface">340 g</span>
+<span class="text-[11px] text-on-surface-variant">(PLA Branco)</span>
+</div>
+</td>
+<td class="py-4 px-4 text-on-surface font-label">4h 25m</td>
+<td class="py-4 px-4 text-on-surface-variant font-label">12/10 • 11:30</td>
+<td class="py-4 px-4 text-right">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-label font-bold uppercase tracking-wider bg-surface-container-high text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Concluído
+                </span>
+</td>
+</tr>
+<!-- Linha 2: Impressão 3D Mecânica -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-4 px-4 font-label font-bold text-primary">#OS-8490</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Engrenagem Robô Seguidor</span>
+<span class="text-[11px] text-on-surface-variant">Competição Robótica IEEE</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="px-2.5 py-1 rounded text-[10px] font-label font-semibold bg-surface-container text-on-surface">
+                  Impressão 3D
+                </span>
+</td>
+<td class="py-4 px-4 text-on-surface">Prusa i3 MK3S+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Gabriel Duarte</span>
+<span class="text-[10px] text-on-surface-variant font-label">Eng. Mecânica • Mat. 19402</span>
+</div>
+</td>
+<td class="py-4 px-4 text-on-surface-variant">Lucas Mendes</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-on-surface">65 g</span>
+<span class="text-[11px] text-on-surface-variant">(PETG Preto)</span>
+</div>
+</td>
+<td class="py-4 px-4 text-on-surface font-label">1h 15m</td>
+<td class="py-4 px-4 text-on-surface-variant font-label">12/10 • 09:40</td>
+<td class="py-4 px-4 text-right">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-label font-bold uppercase tracking-wider bg-surface-container-high text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Concluído
+                </span>
+</td>
+</tr>
+<!-- Linha 3: Escaneamento 3D (DESTAQUE RN05 - ISENTO DE INSUMO) -->
+<tr class="bg-primary-fixed/20 hover:bg-primary-fixed/30 transition-colors">
+<td class="py-4 px-4 font-label font-bold text-primary">#OS-8488</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Escaneamento 3D Busto Histórico</span>
+<span class="text-[11px] text-on-surface-variant">Acervo Patrimônio &amp; Museologia</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="px-2.5 py-1 rounded text-[10px] font-label font-bold uppercase tracking-wider bg-primary-fixed text-on-primary-fixed">
+                  Escaneamento 3D
+                </span>
+</td>
+<td class="py-4 px-4 text-on-surface">Scanner EinScan Pro HD</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Dra. Beatriz Nogueira</span>
+<span class="text-[10px] text-on-surface-variant font-label">Pesquisadora / PPG-ARQ</span>
+</div>
+</td>
+<td class="py-4 px-4 text-on-surface-variant">Camila Prado</td>
+<td class="py-4 px-4">
+<!-- Regra RN05 Destaque -->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[10px] font-label font-bold bg-surface-container-highest text-on-surface tracking-wide">
+<span class="material-symbols-outlined text-xs">savings</span>
+                  0 g (Isento - RN05)
+                </span>
+</td>
+<td class="py-4 px-4 text-on-surface font-label">2h 10m</td>
+<td class="py-4 px-4 text-on-surface-variant font-label">11/10 • 16:50</td>
+<td class="py-4 px-4 text-right">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-label font-bold uppercase tracking-wider bg-surface-container text-on-surface">
+                  Finalizado
+                </span>
+</td>
+</tr>
+<!-- Linha 4: Produção em Resina SLA -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-4 px-4 font-label font-bold text-primary">#OS-8485</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Molde Dentário Anatômico</span>
+<span class="text-[11px] text-on-surface-variant">Pesquisa Bioengenharia Aplicada</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="px-2.5 py-1 rounded text-[10px] font-label font-semibold bg-tertiary-fixed text-on-tertiary-fixed">
+                  SLA / Resina
+                </span>
+</td>
+<td class="py-4 px-4 text-on-surface">Elegoo Saturn 2 8K</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Carlos Eduardo Vianna</span>
+<span class="text-[10px] text-on-surface-variant font-label">Mestrando • Mat. 22410</span>
+</div>
+</td>
+<td class="py-4 px-4 text-on-surface-variant">Lucas Mendes</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-on-surface">42 ml</span>
+<span class="text-[11px] text-on-surface-variant">(Resina Cinza)</span>
+</div>
+</td>
+<td class="py-4 px-4 text-on-surface font-label">3h 40m</td>
+<td class="py-4 px-4 text-on-surface-variant font-label">11/10 • 14:00</td>
+<td class="py-4 px-4 text-right">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-label font-bold uppercase tracking-wider bg-surface-container-high text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Concluído
+                </span>
+</td>
+</tr>
+<!-- Linha 5: Produção em Andamento -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-4 px-4 font-label font-bold text-primary">#OS-8495</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Cúpula Geodésica Escala 1:50</span>
+<span class="text-[11px] text-on-surface-variant">Estudos de Estruturas Espaciais</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="px-2.5 py-1 rounded text-[10px] font-label font-semibold bg-surface-container text-on-surface">
+                  Impressão 3D
+                </span>
+</td>
+<td class="py-4 px-4 text-on-surface">Creality Ender 3 V2</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Renata Toledo</span>
+<span class="text-[10px] text-on-surface-variant font-label">Graduanda • Mat. 23112</span>
+</div>
+</td>
+<td class="py-4 px-4 text-on-surface-variant">Lucas Mendes</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-on-surface">110 g</span>
+<span class="text-[11px] text-on-surface-variant">(ABS Cinza)</span>
+</div>
+</td>
+<td class="py-4 px-4 text-on-surface font-label">5h 10m</td>
+<td class="py-4 px-4 text-on-surface-variant font-label">Em execução</td>
+<td class="py-4 px-4 text-right">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-label font-bold uppercase tracking-wider bg-primary text-on-primary animate-pulse">
+                  Imprimindo (68%)
+                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Paginação e Métricas Inferiores -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-outline-variant/30 text-xs text-on-surface-variant font-label">
+<div>Mostrando 5 de 142 ordens de serviço registradas neste ciclo</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors disabled:opacity-50" disabled="" type="button">Anterior</button>
+<span class="px-2 font-semibold text-on-surface">Página 1 de 29</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors" type="button">Próxima</button>
+</div>
+</div>
+</div>
+<!-- Modal: Nova Entrada de Insumo Fracionado / Cadastro (Oculto por padrão) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden flex items-center justify-center p-4" id="modalInsumo">
+<div class="bg-surface-container-lowest rounded-2xl max-w-lg w-full p-6 shadow-xl flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[10px] font-label uppercase tracking-widest text-primary font-bold">Cadastro de Suprimento (RF04)</span>
+<h3 class="font-headline text-2xl font-semibold text-on-surface">Nova Entrada de Insumo</h3>
+</div>
+<button class="p-1 rounded-lg hover:bg-surface-container text-on-surface-variant" id="btnCloseInsumo" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-3 text-xs">
+<div class="flex flex-col gap-1">
+<label class="font-label font-semibold text-on-surface">Material e Diâmetro</label>
+<input class="px-3.5 py-2.5 rounded-lg bg-surface-container-low text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Ex: PLA Branco 1.75mm ou Resina Bio" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="flex flex-col gap-1">
+<label class="font-label font-semibold text-on-surface">Peso Líquido Inicial (g / ml)</label>
+<input class="px-3.5 py-2.5 rounded-lg bg-surface-container-low text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" type="number" value="1000"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label font-semibold text-on-surface">Tara do Carretel Vazio (g)</label>
+<input class="px-3.5 py-2.5 rounded-lg bg-surface-container-low text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" type="number" value="210"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="flex flex-col gap-1">
+<label class="font-label font-semibold text-on-surface">Fabricante / Lote</label>
+<input class="px-3.5 py-2.5 rounded-lg bg-surface-container-low text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Ex: Esun #2024-B" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label font-semibold text-on-surface">Data de Recebimento</label>
+<input class="px-3.5 py-2.5 rounded-lg bg-surface-container-low text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" type="date" value="2024-10-12"/>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-end gap-3 pt-2">
+<button class="px-4 py-2 rounded-lg text-xs font-label font-medium text-on-surface-variant hover:bg-surface-container" id="btnCancelInsumo" type="button">Cancelar</button>
+<button class="px-5 py-2 rounded-lg text-xs font-label font-semibold bg-primary text-on-primary hover:bg-primary-container" id="btnSalvarInsumo" type="button">Salvar e Calibrar</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro-interações em JavaScript -->
+<script>
+    (function() {
+      // Modais
+      const modalInsumo = document.getElementById('modalInsumo');
+      const btnOpenInsumo = document.getElementById('btnOpenInsumo');
+      const btnCloseInsumo = document.getElementById('btnCloseInsumo');
+      const btnCancelInsumo = document.getElementById('btnCancelInsumo');
+      const btnSalvarInsumo = document.getElementById('btnSalvarInsumo');
+
+      const toggleModal = (show) => {
+        if (show) {
+          modalInsumo.classList.remove('hidden');
+        } else {
+          modalInsumo.classList.add('hidden');
+        }
+      };
+
+      if (btnOpenInsumo) btnOpenInsumo.addEventListener('click', () => toggleModal(true));
+      if (btnCloseInsumo) btnCloseInsumo.addEventListener('click', () => toggleModal(false));
+      if (btnCancelInsumo) btnCancelInsumo.addEventListener('click', () => toggleModal(false));
+      if (btnSalvarInsumo) btnSalvarInsumo.addEventListener('click', () => {
+        alert('Bobina cadastrada com sucesso! Saldo gravimétrico inicial inicializado.');
+        toggleModal(false);
+      });
+
+      // Cálculo Dinâmico do Simulador de Abatimento
+      const selectCarretel = document.getElementById('selectCarretel');
+      const inputPeca = document.getElementById('inputPesoGrama');
+      const inputSuporte = document.getElementById('inputSuportes');
+      const labelTotal = document.getElementById('labelTotalConsumo');
+      const labelNovoSaldo = document.getElementById('labelNovoSaldo');
+      const avisoAlerta = document.getElementById('avisoAlertaRN04');
+      const btnConfirmar = document.getElementById('btnConfirmarAbatimento');
+
+      function atualizarCalculo() {
+        const saldoAtual = parseFloat(selectCarretel.value) || 0;
+        const pesoPeca = parseFloat(inputPeca.value) || 0;
+        const pesoSuporte = parseFloat(inputSuporte.value) || 0;
+        const consumoTotal = pesoPeca + pesoSuporte;
+        const novoSaldo = Math.max(0, saldoAtual - consumoTotal);
+
+        labelTotal.textContent = `${consumoTotal} g`;
+        labelNovoSaldo.textContent = `${novoSaldo} g`;
+
+        if (novoSaldo < 150) {
+          avisoAlerta.classList.remove('hidden');
+        } else {
+          avisoAlerta.classList.add('hidden');
+        }
+      }
+
+      if (selectCarretel) selectCarretel.addEventListener('change', atualizarCalculo);
+      if (inputPeca) inputPeca.addEventListener('input', atualizarCalculo);
+      if (inputSuporte) inputSuporte.addEventListener('input', atualizarCalculo);
+
+      if (btnConfirmar) {
+        btnConfirmar.addEventListener('click', () => {
+          const nomeCarretel = selectCarretel.options[selectCarretel.selectedIndex].getAttribute('data-nome');
+          const consumoTotal = (parseFloat(inputPeca.value) || 0) + (parseFloat(inputSuporte.value) || 0);
+          alert(`Abatimento de ${consumoTotal}g efetuado com sucesso no estoque de [${nomeCarretel}]. Rastreabilidade vinculada conforme RN04 e RN06.`);
+        });
+      }
+
+      const btnOpenProducao = document.getElementById('btnOpenProducao');
+      if (btnOpenProducao) {
+        btnOpenProducao.addEventListener('click', () => {
+          alert('Redirecionando para o assistente de Fatiamento e Enfileiramento de Nova O.S.');
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-container": "#d47070", "on-primary-container": "#fbe8d8", "on-tertiary-container": "#3a2020", "background": "#faf5ee", "surface-tint": "#c2652a", "on-secondary-fixed-variant": "#504840", "tertiary-fixed": "#fce0e0", "secondary": "#78706a", "on-primary-fixed": "#401a08", "surface-variant": "#ece6dc", "inverse-surface": "#3a302a", "secondary-fixed": "#eae2da", "outline-variant": "#d8d0c8", "primary": "#c2652a", "primary-container": "#e08850", "surface-container-high": "#ece6dc", "surface-container-highest": "#e6e0d6", "tertiary": "#8c3c3c", "error-container": "#fce4e0", "secondary-fixed-dim": "#cec6be", "on-tertiary-fixed-variant": "#6e3030", "primary-fixed-dim": "#f0a878", "on-error-container": "#7a1a10", "surface": "#faf5ee", "primary-fixed": "#fbe8d8", "inverse-on-surface": "#faf5ee", "secondary-container": "#eae2da", "surface-dim": "#dcd6cc", "outline": "#9a9088", "on-tertiary-fixed": "#2e1515", "on-secondary": "#ffffff", "on-surface": "#3a302a", "on-primary-fixed-variant": "#8a4518", "surface-bright": "#faf5ee", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "surface-container": "#f2ece4", "on-surface-variant": "#605850", "tertiary-fixed-dim": "#e8a0a0", "error": "#c0392b", "inverse-primary": "#f0a878", "on-secondary-fixed": "#2a2420", "surface-container-low": "#f6f0e8", "on-primary": "#ffffff", "on-secondary-container": "#605850", "on-tertiary": "#ffffff", "on-background": "#3a302a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": {}, "fontFamily": { "headline": ["EB Garamond"], "display": ["EB Garamond"], "body": ["Manrope"], "label": ["Manrope"] }, "fontSize": {} } } }</script></head><body class="bg-background font-body text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-6 px-4 shadow-[0_2px_16px_rgba(58,48,42,0.04)]"><div class="flex flex-col gap-6"><div class="flex items-center gap-3 px-3 py-2"><img alt="MUSARQ Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X1A23RKoGsnNonG8usr8wVF-B9rQwxAhjYA1T6E79Je92Rfh0e48-uxQxXAB0KuR5wRG9AXsICUUuw9FesCLiRaQ6k73gq85r5U1lghUVGWKwBH5u4QAbsiOJOCiCPB4B41ZOkzHDnYZVToubkAvcMyN2cwQsRmFQaGRLh1nhZdmK8ruoCD9Epbv4ghyjh5DkJ5wdLVn8bzH17pngH93qRl4pok_vA1ooFkZRbvX0vLRElV_EExwQX4-o"/><div class="flex flex-col"><span class="font-headline text-lg font-bold tracking-tight text-on-surface leading-tight">MUSARQ</span><span class="text-[11px] font-label uppercase tracking-widest text-on-surface-variant">Lab Prototipagem</span></div></div><div class="px-3"><div class="h-[1px] w-full bg-outline-variant/60"></div></div><nav class="flex flex-col gap-1.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_2px_16px_rgba(58,48,42,0.04)]"><a aria-current="page" class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-lg transition-all duration-150 bg-primary-container text-on-primary-container font-semibold shadow-[0_2px_16px_rgba(58,48,42,0.04)]" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span>Dashboard &amp; Visão Geral</span></a><a class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="maquinas" href="#"><span class="material-symbols-outlined text-[20px]">precision_manufacturing</span><span>Máquinas &amp; Manutenções</span></a><a class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="producao" href="#"><span class="material-symbols-outlined text-[20px]">layers</span><span>Produção &amp; Insumos</span></a><a class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="emprestimos" href="#"><span class="material-symbols-outlined text-[20px]">swap_horiz</span><span>Empréstimos de Equipamentos</span></a><a class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="relatorios" href="#"><span class="material-symbols-outlined text-[20px]">bar_chart</span><span>Relatórios Gerenciais</span></a></nav></div><div class="flex flex-col gap-3 px-3"><div class="p-3 rounded-lg bg-surface-container flex flex-col gap-1.5"><div class="flex items-center gap-2"><span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="text-[11px] font-label font-semibold text-on-surface uppercase tracking-wider">Status do Sistema</span></div><p class="text-xs text-on-surface-variant leading-relaxed">Fila de corte laser: 4 jobs. Impressão 3D: 85% capacidade.</p></div><div class="text-[11px] text-on-surface-variant font-label text-center pt-2">© 2024 Lab MUSARQ</div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_2px_16px_rgba(58,48,42,0.04)]"><div class="h-16 w-full px-8 flex items-center justify-between"><div class="flex items-center gap-3"><div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="text-xs font-label font-medium text-on-surface">Laboratório Operacional - Turno Manhã</span></div></div><div class="flex items-center gap-4"><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Alertas de Manutenção Preventiva" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary"></span></button><button class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-primary text-on-primary text-xs font-label font-semibold tracking-wide hover:bg-primary-container transition-colors shadow-[0_2px_16px_rgba(58,48,42,0.04)]" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Nova O.S.</span></button><div class="h-6 w-[1px] bg-outline-variant/60"></div><div class="flex items-center gap-3 pl-1"><div class="flex flex-col text-right"><span class="text-xs font-medium text-on-surface leading-tight">Lucas Mendes</span><span class="text-[10px] font-label text-on-surface-variant">Técnico de Prototipagem</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHDJ47uv-nXrtn1-L-KLXUKuRnBDtrKcXt0iLAFPk_z4KG3NDBEOFBzUBzHPz7wTlysGBawUP-61BKHyoPvd8kHaJCpKXpcNx4q9_9-P2njf8D4CS_EdnFzhgYbqGrw5B7hrxJ-b_omnSnqE2T8aE85C89S711x3JGlxBEVoLi89f0EjoHc1qmeWBcKNTj3leqoOo2WUwiBszQISItGLn4VIUNtwhlaAMCYy7eyp1mO_VWJJC8Zm1v"/></div></div></div></header><main class="relative pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="px-8 py-8 flex flex-col gap-10">
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2">
+<div class="flex flex-col gap-2 max-w-2xl">
+<div class="flex items-center gap-3">
+<span class="text-[11px] font-label font-bold uppercase tracking-widest text-primary">Operação &amp; Controle Físico</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="text-xs font-label text-on-surface-variant" id="live-time-indicator">Sincronizado há instantes</span>
+</div>
+<h1 class="font-headline text-4xl lg:text-5xl font-normal text-on-surface tracking-tight">
+          Painel Geral do Laboratório
+        </h1>
+<p class="font-body text-sm lg:text-base text-on-surface-variant leading-relaxed">
+          Monitoramento em tempo real da manufatura aditiva, calibração óptica e inventário de equipamentos em circulação.
+        </p>
+</div>
+<div class="flex items-center gap-3 self-start md:self-end">
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container-highest text-on-surface text-xs font-label font-medium hover:bg-surface-dim transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Calibrações</span>
+</button>
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-primary text-on-primary text-xs font-label font-semibold hover:bg-primary-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Nova O.S. Produção</span>
+</button>
+</div>
+</section>
+<!-- BANNER DE BOAS-VINDAS & RESUMO DO DIA -->
+<section class="relative overflow-hidden rounded-xl bg-surface-container-low p-8 shadow-sm">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row gap-8 items-start lg:items-center justify-between relative z-10">
+<div class="flex flex-col gap-2">
+<div class="inline-flex items-center gap-2 text-xs font-label uppercase tracking-widest text-primary font-semibold">
+<span class="material-symbols-outlined text-base">waving_hand</span>
+<span>Bom dia, Lucas Mendes</span>
+</div>
+<h2 class="font-headline text-2xl lg:text-3xl text-on-surface">
+            O fluxo de hoje contempla <span class="italic text-primary font-normal">8 trabalhos ativos</span> no parque fabril.
+          </h2>
+<p class="text-xs text-on-surface-variant max-w-xl">
+            Ambiente com umidade controlada a 42% na câmara de resina e temperatura ambiente de 23.4°C. Todos os filtros HEPA operacionais.
+          </p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full lg:w-auto">
+<div class="flex flex-col p-4 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="text-xs font-label text-on-surface-variant">Impressões Ativas</span>
+<span class="font-headline text-3xl font-semibold text-primary mt-1">08</span>
+<span class="text-[10px] font-label text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> 6 FDM · 2 SLA
+            </span>
+</div>
+<div class="flex flex-col p-4 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="text-xs font-label text-on-surface-variant">Scanners em Uso</span>
+<span class="font-headline text-3xl font-semibold text-on-surface mt-1">02</span>
+<span class="text-[10px] font-label text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Digitalização ativa
+            </span>
+</div>
+<div class="flex flex-col p-4 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="text-xs font-label text-on-surface-variant">Manutenções Sem.</span>
+<span class="font-headline text-3xl font-semibold text-tertiary mt-1">03</span>
+<span class="text-[10px] font-label text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> RN02 preventiva
+            </span>
+</div>
+<div class="flex flex-col p-4 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="text-xs font-label text-on-surface-variant">Empréstimos</span>
+<span class="font-headline text-3xl font-semibold text-on-surface mt-1">12</span>
+<span class="text-[10px] font-label text-primary font-medium flex items-center gap-1 mt-1">
+              4 devoluções hoje
+            </span>
+</div>
+</div>
+</div>
+</section>
+<!-- AÇÕES RÁPIDAS -->
+<section class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<h3 class="text-xs font-label font-bold uppercase tracking-widest text-on-surface-variant">Ações Rápidas de Bancada</h3>
+<span class="text-[11px] font-label text-on-surface-variant">Atalhos Operacionais</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<button class="group flex items-center gap-4 p-4 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-all text-left shadow-sm" type="button">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-xl">add_task</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-label font-bold text-on-surface">Nova O.S. Produção</span>
+<span class="text-[11px] text-on-surface-variant">Importar .GCODE / .3MF</span>
+</div>
+</button>
+<button class="group flex items-center gap-4 p-4 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-all text-left shadow-sm" type="button">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-xl">build_circle</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-label font-bold text-on-surface">Registrar Manutenção</span>
+<span class="text-[11px] text-on-surface-variant">Preventiva / Corretiva RN02</span>
+</div>
+</button>
+<button class="group flex items-center gap-4 p-4 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-all text-left shadow-sm" type="button">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed-variant group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-xl">swap_horizontal_circle</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-label font-bold text-on-surface">Novo Empréstimo</span>
+<span class="text-[11px] text-on-surface-variant">Cautela de Instrumentos</span>
+</div>
+</button>
+<button class="group flex items-center gap-4 p-4 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-all text-left shadow-sm" type="button">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed-dim/40 flex items-center justify-center text-primary-container group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-xl">inventory_2</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-label font-bold text-on-surface">Entrada de Filamento</span>
+<span class="text-[11px] text-on-surface-variant">Pesar e bipar carretel</span>
+</div>
+</button>
+</div>
+</section>
+<!-- STATUS EM TEMPO REAL (CARDS BENTO) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- PARQUE DE MÁQUINAS ATIVAS (7 COLS) -->
+<div class="lg:col-span-7 flex flex-col p-6 rounded-xl bg-surface-container-low shadow-sm gap-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">precision_manufacturing</span>
+<h3 class="font-headline text-2xl text-on-surface">Máquinas &amp; Scanners Ativos</h3>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-[11px] font-label font-semibold text-on-surface">
+            8 / 10 Equipamentos Operando
+          </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Ender 3 V3 -->
+<div class="p-4 rounded-lg bg-surface-container-lowest flex flex-col gap-3 shadow-sm">
+<div class="flex items-start justify-between">
+<div>
+<span class="text-xs font-label font-semibold text-on-surface">Creality Ender 3 V3</span>
+<p class="text-[11px] text-on-surface-variant">FDM · Bico 0.4mm · PLA Cinza</p>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span> Imprimindo
+              </span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between text-[11px] font-label">
+<span class="text-on-surface-variant">Job #1084 (Maquete Bloco A)</span>
+<span class="font-medium text-on-surface">74%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 74%"></div>
+</div>
+</div>
+</div>
+<!-- Prusa MK4 -->
+<div class="p-4 rounded-lg bg-surface-container-lowest flex flex-col gap-3 shadow-sm">
+<div class="flex items-start justify-between">
+<div>
+<span class="text-xs font-label font-semibold text-on-surface">Original Prusa MK4</span>
+<p class="text-[11px] text-on-surface-variant">FDM · Nextruder · PETG Branco</p>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Imprimindo
+              </span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between text-[11px] font-label">
+<span class="text-on-surface-variant">Job #1086 (Engrenagem Biônica)</span>
+<span class="font-medium text-on-surface">32%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 32%"></div>
+</div>
+</div>
+</div>
+<!-- Bambu Lab X1C -->
+<div class="p-4 rounded-lg bg-surface-container-lowest flex flex-col gap-3 shadow-sm">
+<div class="flex items-start justify-between">
+<div>
+<span class="text-xs font-label font-semibold text-on-surface">Bambu Lab X1-Carbon #01</span>
+<p class="text-[11px] text-on-surface-variant">CoreXY · AMS Multi-cor · ABS Terracota</p>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Imprimindo
+              </span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between text-[11px] font-label">
+<span class="text-on-surface-variant">Job #1087 (Cúpula Geodésica)</span>
+<span class="font-medium text-on-surface">89%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 89%"></div>
+</div>
+</div>
+</div>
+<!-- Formlabs Form 3+ -->
+<div class="p-4 rounded-lg bg-surface-container-lowest flex flex-col gap-3 shadow-sm">
+<div class="flex items-start justify-between">
+<div>
+<span class="text-xs font-label font-semibold text-on-surface">Formlabs Form 3+</span>
+<p class="text-[11px] text-on-surface-variant">SLA · Resina Grey Pro v4</p>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-[10px] font-semibold">
+                Lavagem / Cura
+              </span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between text-[11px] font-label">
+<span class="text-on-surface-variant">Job #1082 (Prótese Canina)</span>
+<span class="font-medium text-on-surface">100%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-2 flex flex-col sm:flex-row gap-4 justify-between items-center bg-surface-container p-4 rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">photo_camera_front</span>
+<div class="flex flex-col">
+<span class="text-xs font-label font-semibold text-on-surface">Scanners 3D em Operação:</span>
+<span class="text-[11px] text-on-surface-variant">Shining 3D EinScan Pro HD &amp; Creality Ferret Pro</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-[11px] font-label font-semibold text-on-surface">Bancada Óptica B-03</span>
+<span class="text-xs text-primary font-medium">Captura de Nuvem</span>
+</div>
+</div>
+</div>
+<!-- PAINEL LATERAL DE ALERTAS CRÍTICOS (5 COLS) -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<!-- ALERTA RN02: PREVENTIVA -->
+<div class="p-6 rounded-xl bg-tertiary-fixed/40 flex flex-col gap-3 shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-tertiary">
+<span class="material-symbols-outlined text-xl">warning</span>
+<span class="text-xs font-label font-bold uppercase tracking-wider">Regra de Manutenção RN02</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary text-on-tertiary text-[10px] font-label font-semibold">Crítico (48h)</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-headline text-lg font-semibold text-on-tertiary-container">Bambu Lab X1-Carbon #02</h4>
+<p class="text-xs text-on-tertiary-container/90 mt-1 leading-relaxed">
+              Equipamento atingirá o ciclo preventivo obrigatório de 30 dias de extrusão contínua em 48 horas. Ação necessária: limpeza dos eixos de carbono e lubrificação do fuso Z.
+            </p>
+</div>
+<div class="pt-2 flex items-center justify-between">
+<span class="text-[11px] font-label text-on-tertiary-container">Última revisão: 28 dias atrás</span>
+<button class="px-3 py-1.5 rounded-lg bg-tertiary text-on-tertiary text-xs font-label font-semibold hover:bg-tertiary-container transition-colors shadow-sm" type="button">
+              Agendar Parada
+            </button>
+</div>
+</div>
+<!-- INSUMOS CRÍTICOS & DEVOLUÇÕES HOJE -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 flex-1">
+<!-- FILAMENTO BAIXO -->
+<div class="p-5 rounded-xl bg-surface-container-low flex flex-col justify-between shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-lg">donut_large</span>
+</div>
+<div>
+<h4 class="text-xs font-label font-bold text-on-surface uppercase tracking-wider">Insumo Crítico</h4>
+<p class="text-[11px] text-on-surface-variant">Carretel Fracionado em Uso</p>
+</div>
+</div>
+<span class="text-xs font-bold text-primary font-label">0.42 kg</span>
+</div>
+<div class="mt-3">
+<div class="flex justify-between text-[11px] font-label mb-1.5">
+<span class="text-on-surface font-medium">PLA Silk Bronze (1.75mm)</span>
+<span class="text-primary font-semibold">14% restante</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 14%"></div>
+</div>
+<p class="text-[10px] text-on-surface-variant mt-2">
+                Insuficiente para projetos superiores a 450g. Reabastecimento requerido no Almoxarifado central.
+              </p>
+</div>
+</div>
+<!-- EMPRÉSTIMOS COM DEVOLUÇÃO HOJE -->
+<div class="p-5 rounded-xl bg-surface-container-low flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-lg">assignment_return</span>
+</div>
+<div>
+<h4 class="text-xs font-label font-bold text-on-surface uppercase tracking-wider">Devoluções Hoje</h4>
+<p class="text-[11px] text-on-surface-variant">4 itens com término de prazo às 18:00</p>
+</div>
+</div>
+<button class="text-xs font-label text-primary font-medium hover:underline">Ver Todos</button>
+</div>
+<div class="mt-3 flex flex-col gap-2">
+<div class="flex items-center justify-between text-xs py-1 px-2 rounded bg-surface-container-lowest">
+<span class="font-medium text-on-surface">Paquímetro Mitutoyo 150mm #04</span>
+<span class="text-[11px] font-label text-on-surface-variant">Prof. André</span>
+</div>
+<div class="flex items-center justify-between text-xs py-1 px-2 rounded bg-surface-container-lowest">
+<span class="font-medium text-on-surface">Scanner EinScan Pro (Maleta A)</span>
+<span class="text-[11px] font-label text-on-surface-variant">Mariana (TCC)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FLUXO SEMANAL DE PRODUÇÃO & GRÁFICO SVG -->
+<section class="p-6 rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">insights</span>
+<h3 class="font-headline text-2xl text-on-surface">Fluxo Semanal de Produção &amp; Ocupação</h3>
+</div>
+<p class="text-xs text-on-surface-variant">Horas de máquina faturadas e peso de material extrudado por dia útil (Semana 42).</p>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="text-xs font-label text-on-surface">Horas Extrusão</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="text-xs font-label text-on-surface">Cargas Faturadas</span>
+</div>
+</div>
+</div>
+<!-- VISUALIZAÇÃO GRÁFICA EM SVG EMBEDDED -->
+<div class="w-full h-48 relative flex items-end">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 700 160">
+<!-- Linhas Guia Sutis -->
+<line class="text-outline-variant/30" stroke="currentColor" stroke-dasharray="4" x1="0" x2="700" y1="20" y2="20"></line>
+<line class="text-outline-variant/30" stroke="currentColor" stroke-dasharray="4" x1="0" x2="700" y1="60" y2="60"></line>
+<line class="text-outline-variant/30" stroke="currentColor" stroke-dasharray="4" x1="0" x2="700" y1="100" y2="100"></line>
+<line class="text-outline-variant/50" stroke="currentColor" x1="0" x2="700" y1="140" y2="140"></line>
+<!-- Área preenchida com degradê -->
+<defs>
+<lineargradient id="primaryGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#c2652a" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#c2652a" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Caminho de Área -->
+<polygon fill="url(#primaryGradient)" points="50,140 50,85 150,60 250,95 350,30 450,45 550,20 650,70 650,140"></polygon>
+<!-- Curva Primária (Horas) -->
+<polyline fill="none" points="50,85 150,60 250,95 350,30 450,45 550,20 650,70" stroke="#c2652a" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></polyline>
+<!-- Curva Secundária -->
+<polyline fill="none" points="50,110 150,90 250,115 350,75 450,80 550,55 650,95" stroke="#78706a" stroke-dasharray="3 3" stroke-linecap="round" stroke-width="2"></polyline>
+<!-- Pontos Interativos -->
+<circle class="fill-surface-container-lowest stroke-primary stroke-2" cx="50" cy="85" r="4"></circle>
+<circle class="fill-surface-container-lowest stroke-primary stroke-2" cx="150" cy="60" r="4"></circle>
+<circle class="fill-surface-container-lowest stroke-primary stroke-2" cx="250" cy="95" r="4"></circle>
+<circle class="fill-primary stroke-surface-container-lowest stroke-2" cx="350" cy="30" r="5"></circle>
+<circle class="fill-surface-container-lowest stroke-primary stroke-2" cx="450" cy="45" r="4"></circle>
+<circle class="fill-primary stroke-surface-container-lowest stroke-2" cx="550" cy="20" r="5"></circle>
+<circle class="fill-surface-container-lowest stroke-primary stroke-2" cx="650" cy="70" r="4"></circle>
+</svg>
+</div>
+<!-- Legendas dos Dias -->
+<div class="grid grid-cols-7 text-center text-xs font-label text-on-surface-variant pt-2 border-none">
+<div><span class="block font-semibold text-on-surface">Seg</span><span>18.4h</span></div>
+<div><span class="block font-semibold text-on-surface">Ter</span><span>21.2h</span></div>
+<div><span class="block font-semibold text-on-surface">Qua</span><span>16.8h</span></div>
+<div><span class="block font-semibold text-primary font-bold">Qui</span><span>26.5h (Pico)</span></div>
+<div><span class="block font-semibold text-on-surface">Sex</span><span>24.0h</span></div>
+<div><span class="block font-semibold text-primary font-bold">Sáb</span><span>28.1h (Pico)</span></div>
+<div><span class="block font-semibold text-on-surface">Dom</span><span>19.3h</span></div>
+</div>
+</section>
+<!-- FILA DE PRODUÇÃO RECENTE -->
+<section class="flex flex-col gap-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<h3 class="font-headline text-2xl text-on-surface">Fila de Produção em Andamento</h3>
+<p class="text-xs text-on-surface-variant">Ordens de serviço processadas na fila prioritária do MUSARQ.</p>
+</div>
+<div class="flex items-center gap-2">
+<input class="text-xs font-label px-3.5 py-2 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-sm w-64" placeholder="Filtrar por aluno, projeto ou máquina..." type="text"/>
+<button class="p-2 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-dim transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto rounded-xl bg-surface-container-low shadow-sm">
+<table class="w-full text-left text-xs">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant uppercase tracking-wider text-[10px] font-label font-bold">
+<th class="py-3 px-4">Item &amp; Prévia</th>
+<th class="py-3 px-4">Projeto / Solicitante</th>
+<th class="py-3 px-4">Técnico Resp.</th>
+<th class="py-3 px-4">Equipamento</th>
+<th class="py-3 px-4">Material / Resolução</th>
+<th class="py-3 px-4">Progresso / Tempo</th>
+<th class="py-3 px-4 text-right">Ação</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface">
+<!-- Linha 1 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-3.5 px-4 flex items-center gap-3">
+<img class="w-10 h-10 rounded-lg object-cover bg-surface-container-high" data-alt="Close-up macro photography of a 3D printed terracotta architectural scale model pavilion with organic parametric curves, lit by soft warm studio sunlight in the MUSARQ lab." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATiENjKEkcs8rsDljcawbgIcXWLK2HiMkle5yW7IbFmfuLrHiGh8a21nqzBmasRABM7sAbv1rBW41NZk4uhyXm6pZLKCKeIn8Wf0w89gmQaJGRlcXvekbgcoQ1iDEi97TcSitWQtfUlE7W8FDPP6jf0wyt7Yjnib4hOjldJrl1UbPFzItVk5my1t5yGPKMW9QSsQ2JBzivQyufuz963lE3IAi4-6e0h3WWHGUyOo6-EZCO5eg_VPUi"/>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Maquete Pavilhão Expo</span>
+<span class="text-[10px] font-label text-on-surface-variant">O.S. #2024-0941</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Prof. Carlos Eduardo</span>
+<span class="text-[10px] text-on-surface-variant">Depto. Arquitetura</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-xs text-on-surface font-medium">Lucas Mendes</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label text-[11px] text-on-surface">Bambu X1-C #01</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-on-surface">PLA Matte Bege</span>
+<span class="block text-[10px] text-on-surface-variant">Camada 0.16mm</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1 w-32">
+<div class="flex justify-between text-[10px] font-label">
+<span class="font-semibold text-primary">89%</span>
+<span class="text-on-surface-variant">Restam 42m</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 89%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Linha 2 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors bg-surface-container-lowest/40">
+<td class="py-3.5 px-4 flex items-center gap-3">
+<img class="w-10 h-10 rounded-lg object-cover bg-surface-container-high" data-alt="High precision photopolymer resin printed gear prototype in warm grey tone resting on an optical inspection table with diffuse laboratory warm illumination." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-we4-_B96iJbdp2tHmxLWtNXEfd3aTZ0nzwIP85tpgX2bB6Qarr7uXKKYLoZn_TDsXen6HM5grylZ9U6oKbtm348a7kBtclJh2eQ1mWjw-EMRjrXgw0QDdgtcQgjaDFzbycHp2N1OH5Q9CY0QtRieC-hAnwTlsgEtof7ifSB2yYGkNT5ECu9bhwopA7NnBkwIg6I4w6yu9n-NRPuKct43UZaOb75AdBC4LzzNs6tEfnaw1Lxp488j"/>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Engrenagem Planetária</span>
+<span class="text-[10px] font-label text-on-surface-variant">O.S. #2024-0943</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Mariana Sampaio (Mestrado)</span>
+<span class="text-[10px] text-on-surface-variant">Design de Produto</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-xs text-on-surface font-medium">Bárbara F.</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label text-[11px] text-on-surface">Prusa MK4</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-on-surface">PETG Branco Óptico</span>
+<span class="block text-[10px] text-on-surface-variant">Camada 0.10mm</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1 w-32">
+<div class="flex justify-between text-[10px] font-label">
+<span class="font-semibold text-primary">32%</span>
+<span class="text-on-surface-variant">Restam 3h 15m</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 32%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Linha 3 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-3.5 px-4 flex items-center gap-3">
+<img class="w-10 h-10 rounded-lg object-cover bg-surface-container-high" data-alt="3D printed miniature topographical urban relief model made with white PLA on the heated print bed, warm studio ambient lighting, crisp architectural details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClifpKjZ3bZJutrA4CvF7jxeYCRiKhV1-tuohGVI7-6QReR_sCqQoYRG7sPLkWq3IIrJrbpDV3tWqJuWlss2bfKZ4Q8PY5iY0NecRILPXmNewyEPbyox2IugulYbAY82-0_Qjuvijgrm--qgST4XLY0d5RUOGTAw1HwpHMRIolGx6Ul8J9oXNyZt8Yy7qNta8W6qWOV-oLkAzv_TUOixkgkIey0keLt01KZUELpB2CLg_VfIgXm0st"/>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Relevo Topográfico Bacia Sul</span>
+<span class="text-[10px] font-label text-on-surface-variant">O.S. #2024-0940</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Grupo 4 - Urbanismo III</span>
+<span class="text-[10px] text-on-surface-variant">Graduação FAU</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-xs text-on-surface font-medium">Lucas Mendes</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label text-[11px] text-on-surface">Ender 3 V3</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-on-surface">PLA Cinza Cimento</span>
+<span class="block text-[10px] text-on-surface-variant">Camada 0.20mm</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1 w-32">
+<div class="flex justify-between text-[10px] font-label">
+<span class="font-semibold text-primary">74%</span>
+<span class="text-on-surface-variant">Restam 1h 05m</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 74%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Linha 4 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors bg-surface-container-lowest/40">
+<td class="py-3.5 px-4 flex items-center gap-3">
+<img class="w-10 h-10 rounded-lg object-cover bg-surface-container-high" data-alt="High quality SLA resin miniature sculpture prototype with ultra smooth amber translucent finish resting on cleaning station in clean architecture maker lab." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfarlTtTV-cFpC4578suMPdaLFL0CtoKSkQIPpRgJZ0bxtLJT-q6hsb5TE02McMWWp-CZGrHlY46hdCFOIH-fRdUZizwYhbdTIeYhFIN6Nnlm73SYMmdGeOO28efWe0ig1AOROevYm1qpTUywH8TswhnnjY5HaReh96CR4bdfckI3E8Zum4Pm2SldEsHTFHA8bdE8zSWeTCtzKTpKhf5EFdAt3hq0NZLjDmSQXynD_ngRA1ol-DfRO"/>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Escultura de Fachada Paramétrica</span>
+<span class="text-[10px] font-label text-on-surface-variant">O.S. #2024-0938</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Lab Patrimônio Histórico</span>
+<span class="text-[10px] text-on-surface-variant">Pesquisa FAU USP</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-xs text-on-surface font-medium">Bárbara F.</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label text-[11px] text-on-surface">Formlabs Form 3+</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-on-surface">Resina Grey Pro</span>
+<span class="block text-[10px] text-on-surface-variant">Camada 0.05mm</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container text-[11px] font-label font-semibold">Concluído / Cura</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex items-center justify-between text-xs font-label text-on-surface-variant pt-2">
+<span>Exibindo 4 de 18 ordens abertas no sistema</span>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">Anterior</button>
+<button class="px-3 py-1.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">Próxima</button>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script>
+  // Atualização em tempo real do timestamp sutil
+  (function() {
+    const timeElem = document.getElementById('live-time-indicator');
+    if (timeElem) {
+      const now = new Date();
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      timeElem.textContent = 'Horário do Lab: ' + hours + ':' + minutes + ' · Telemetria Ativa';
+    }
+  })();
+</script></main></div></body></html>
